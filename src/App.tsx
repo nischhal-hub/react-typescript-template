@@ -2,8 +2,8 @@ function App() {
 
   return (
     <>
-      <div>
-        Hello world!!
+      <div className="text-3xl text-center py-4 ">
+        React + TypeScript + Vite
       </div>
     </>
   )
