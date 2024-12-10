@@ -1,50 +1,43 @@
-# React + TypeScript + Vite
+# React + TypeScript Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, highly customizable template for building React applications with TypeScript. This template includes Tailwind CSS for styling, components from ShadCN UI, Lucide.dev icons, and React Icons for easy and scalable development.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **React**: A declarative, efficient, and flexible JavaScript library for building user interfaces.
+- **TypeScript**: Adds static typing to JavaScript, improving developer productivity and code quality.
+- **Tailwind CSS**: A utility-first CSS framework for fast UI development.
+- **ShadCN UI Components**: Prebuilt components for a consistent and modern UI.
+- **Lucide.dev Icons**: A beautiful and customizable collection of SVG icons.
+- **React Icons**: A collection of popular icons for React apps.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## File Structure
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+```plaintext
+src/
+├── components/        # Reusable components for the project from shadcn
+│   ├── button.tsx
+│   ├── checkbox.tsx
+│   ├── dialog.tsx
+│   ├── input.tsx
+│   ├── select.tsx
+│   ├── separator.tsx
+│   ├── sheet.tsx
+│   ├── sidebar.tsx
+│   ├── skeleton.tsx
+│   └── tooltip.tsx
+├── styles/            # Tailwind CSS and global styles
+│   ├── globals.css
+│   └── tailwind.css
+├── pages/             # React pages for routing
+├── hooks/             # Custom react hooks
+├── lib/               # Utility functions and helpers
+├── assets/            # Static assets like images and fonts
+├── App.tsx            # Main application component
+├── main.tsx           # React entry point
+├── index.html         # HTML template
+└── tsconfig.json      # TypeScript configuration
